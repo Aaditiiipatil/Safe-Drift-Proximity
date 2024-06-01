@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <div>Gas Levels</div>
+    <canvas id="gasChart"></canvas>
+    <div>Temperature</div>
+    <canvas id="tempChart"></canvas>
+    <div>Humidity</div>
+    <canvas id="humidityChart"></canvas>
+
+    <script>
+        // Data from Flask
+        var gasData = {{ data.gas_levels | tojson }};
+        var tempData = {{ data.temperature | tojson }};
+        var humidityData = {{ data.humidity | tojson }};
+        var labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+        // Gas Chart
+        var ctxGas = document.getElementById('gasChart').getContext('2d');
+        var gasChart = new Chart(ctxGas, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Gas Levels',
+                    data: gasData,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+
+        // Temperature Chart
+        var ctxTemp = document.getElementById('tempChart').getContext('2d');
+        var tempChart = new Chart(ctxTemp, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Temperature',
+                    data: tempData,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+
+        // Humidity Chart
+        var ctxHumidity = document.getElementById('humidityChart').getContext('2d');
+        var humidityChart = new Chart(ctxHumidity, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Humidity',
+                    data: humidityData,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+</body>
+</html>
