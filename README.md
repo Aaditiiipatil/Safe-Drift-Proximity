@@ -22,22 +22,15 @@
 **Screenshots** - 
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/b4cb38cf-7789-4e68-8056-62abc42395aa)
 
-Fig.1. Laborer Access Screen
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/06c3eb13-b5d5-4c5e-a34d-1e17246fffaa)
 
-Fig.2. Laborer Geo-Location Display
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/a8d2cfa7-6198-4cc1-a61e-a2d85d95f929)
 
-Fig.3. Emergency Evacuation Pathway Display
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/1b702dac-9368-4011-8c97-f5cb2c285ae1)
 
-Fig.4. Operator Control Panel Interface
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/44697d3e-3952-419d-a0ae-b35983424e04)
 
-Fig.5. Geospatial Cluster Visualization
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/885bba2e-ac7c-46a6-bb83-010e34410eba)
 
-Fig.6. Sensors Readings(Database)
 ![image](https://github.com/Aaditiiipatil/Safe-Drift-Proximity/assets/143029253/6e2ad49f-6b0e-4501-802b-c0927f5d36df)
 
-Fig.7. Live Sensor Readings Graphical Display
